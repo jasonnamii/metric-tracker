@@ -202,13 +202,91 @@ L2 변동 → L1에 미치는 영향 추정. L3·L4 이상 → 경고.
 
 ---
 
+## 📄 표준 리포트 템플릿
+
+**리뷰 모드 완료 후 아래 템플릿을 채워 출력한다. 빈칸 그대로 출력 금지.**
+
+### 주간/월간 리뷰 보고서 (Google OKR 리뷰 구조)
+
+```markdown
+# [프로젝트/사업명] 지표 리뷰
+기간: YYYY-MM-DD ~ YYYY-MM-DD | 작성:
+
+## 한줄 요약
+> [이번 주/월의 핵심 신호 — "L1 [N]% 달성. L2 [지표]가 [방향]으로 주목"]
+
+## L1 북극성 지표
+| 지표 | 목표 | 실제 | 달성률 | 전주(월) 대비 | 판정 |
+|------|------|------|--------|-------------|------|
+| [지표명] | | | xx% | ±xx% | 🟢정상/🟡주의/🔴위험 |
+
+## L2 드라이버 지표
+| 지표 | 목표 | 실제 | 달성률 | 방향 | 이상신호 |
+|------|------|------|--------|------|---------|
+| [드라이버1] | | | | ↑↓→ | Y/N |
+| [드라이버2] | | | | ↑↓→ | Y/N |
+
+## L3 건강 지표
+| 지표 | 기준선 | 실제 | 상태 |
+|------|--------|------|------|
+| [건강지표1] | | | 🟢/🔴 |
+
+## 변동유형 판정
+- L1: [공통원인/특수원인] — 근거: [1줄]
+- 이상 드라이버: [특수원인이면 — 근본원인 추정]
+
+## 인사이트 (2~3문장)
+[숫자에서 보이는 패턴 + 인과 추정 + 불확실성 표기]
+
+## 액션
+| 구분 | 액션 | 담당 | 기한 |
+|------|------|------|------|
+| 즉시 | | | D+7 |
+| 다음 리뷰까지 | | | |
+```
+
+### 지표 설계 산출물 (OKR 카드 구조)
+
+```markdown
+# [프로젝트명] 지표 체계
+설계일: | 다음 재검토:
+
+## 북극성 지표 (L1 — 1개)
+**[지표명]**
+- 정의: [계산식]
+- 현재값: / 목표: / 기간:
+- 데이터소스: / 리뷰주기: 월간
+
+## 드라이버 지표 (L2 — 3~5개)
+| 지표명 | 정의 | 현재값 | 목표 | 리뷰주기 | 측정병리 위험 |
+|--------|------|--------|------|---------|------------|
+| [드라이버1] | | | | 주간 | Green/Yellow/Red |
+
+## 건강 지표 (L3)
+| 지표명 | 정상 범위 | 경고 기준 | 위험 기준 |
+|--------|----------|----------|----------|
+| [건강1] | | | |
+
+## 카운터 지표 (L4)
+| 지표명 | 감시 대상 드라이버 | 이상 기준 |
+|--------|-----------------|---------|
+| [카운터1] | [드라이버명] | |
+
+## 측정병리 위험 요약
+| 지표 | 병리 | 위험도 | 방어 |
+|------|------|--------|------|
+| | Goodhart | | |
+```
+
+---
+
 ## References (심화)
 
-- **→ references/measurement-pathology.md** — Goodhart, Campbell, McNamara, Surrogation, Cobra Effect. 각 병리의 정의·신호·방어.
-- **→ references/variation-theory.md** — Shewhart, Deming, Common Cause vs Special Cause, 공통원인 편향(tampering).
-- **→ references/systems-metrics.md** — Donella Meadows 12 Leverage Points, Systems Dynamics, Theory of Constraints, 피드백 루프 매핑.
-- **→ references/metric-frameworks-deep.md** — Balanced Scorecard, OKR 구현, AARRR, North Star, Hubbard's AIE, Leading/Lagging hierarchy.
-- **→ references/proxy-metrics.md** — 프록시 이론, 5가지 실패 패턴, 검증 프로토콜.
+- **→ references/measurement-pathology.md** — Goodhart, Campbell, McNamara, Surrogation, Cobra Effect.
+- **→ references/variation-theory.md** — Shewhart, Deming, Common Cause vs Special Cause.
+- **→ references/systems-metrics.md** — Donella Meadows 12 Leverage Points.
+- **→ references/metric-frameworks-deep.md** — Balanced Scorecard, OKR 구현, AARRR, North Star.
+- **→ references/proxy-metrics.md** — 프록시 이론, 5가지 실패 패턴.
 
 ---
 
