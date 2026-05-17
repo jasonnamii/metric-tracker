@@ -15,7 +15,29 @@ description: |
 planning-skill이 "무엇을 할 것인가", ceo-pipeline이 "어떤 순서로 할 것인가"라면, 이 스킬은 **"한 것이 제대로 되고 있는가"를 측정하고 판단하는 것**.
 측정하지 않으면 관리할 수 없고, 잘못 측정하면 잘못된 방향으로 달린다(Drucker, Goodhart).
 
+
+## Skill Boundaries
+
+- **하는 것** — 지표 설계·추적·리뷰 엔진.
+- **안 하는 것** — 재무모델링(→financial-model), 조직 OKR설계 전반(→management-skill M3), 사업전략(→biz-skill), 리서치(→research-frame).
+
 ---
+
+## When to Use
+
+- 사용자가 "지표 설계해줘", "KPI 만들어줘", "리뷰해줘", "track metrics", "design KPIs." 같은 표현으로 발동
+- 분기 시작할 때, 주간리뷰 할 때, 성과 점검할 때.
+- **안 쓸 때** — 재무모델링(→financial-model), 조직 OKR설계 전반(→management-skill M3), 사업전략(→biz-skill), 리서치(→research-frame).
+
+
+## Prerequisites
+
+| # | 체크 | 미충족 시 |
+|---|------|-----------|
+| 1 | 대상·입력 명확 (스킬 발동 의도 확인) | 1줄 확인 후 진입 |
+| 2 | references/ 폴더 접근 가능 | inline fallback |
+| 3 | scripts/ 실행 권한 | 권한 보정 후 재시도 |
+
 
 ## ⛔ 절대 규칙
 
@@ -295,7 +317,36 @@ L2 변동 → L1에 미치는 영향 추정. L3·L4 이상 → 경고.
 산출물·대화 작업 라벨 ZERO. → `shaper-skill/references/no-work-label.md`
 
 
-## Gotchas
+## Output Path
+
+| 산출물 | 경로 |
+|---|---|
+| 주 산출물 | `mnt/outputs/metric-tracker_{topic}_{YYYY-MM-DD}.md` |
+| 형식 | 대시보드로, 리뷰보고서로, .md로. |
+| 리서치 결과 (해당 시) | `{VAULT}/_skills research/metric-tracker/{YYYY-MM-DD}_{topic}.md` |
+
+## Reference Index
+
+| 파일 | 내용 | 언제 |
+|---|---|---|
+| `references/measurement-pathology.md` | measurement pathology | 해당 단계 진입 시 |
+| `references/metric-frameworks-deep.md` | metric frameworks deep | 해당 단계 진입 시 |
+| `references/post-doctor-notes.md` | post doctor notes | 해당 단계 진입 시 |
+| `references/proxy-metrics.md` | proxy metrics | 해당 단계 진입 시 |
+| `references/systems-metrics.md` | systems metrics | 해당 단계 진입 시 |
+| `references/variation-theory.md` | variation theory | 해당 단계 진입 시 |
+
+
+## Next Phase
+
+본 스킬 작업 후 자연스럽게 이어지는 흐름:
+
+- 후속 작업 → `financial-model`
+- 후속 작업 → `management-skill`
+- 후속 작업 → `biz-skill`
+- 후속 작업 → `research-frame`
+
+## Failure Modes (Gotchas)
 
 | 함정 | 대응 |
 |------|------|
@@ -307,3 +358,11 @@ L2 변동 → L1에 미치는 영향 추정. L3·L4 이상 → 경고.
 | 상관→인과 비약 | 리뷰 모드 §4 ④에서 "확인필요" 태그 적극 사용 |
 | 프록시의 약화 | 프록시 검증 주기 (§7 단계 2) 없으면 해마다 신뢰도 하락. 정기 재검증 필수 |
 | 시스템 설정 오류 | §5 시스템 다이내믹스 체크로 피드백 루프 게임화 방지 |
+
+
+## ❌ WRONG vs ✅ CORRECT
+
+```
+❌ WRONG: 트리거 단어만 보고 발동 — 본질·범위 확인 ✗ → 오발동·범위 이탈
+✅ CORRECT: Skill Boundaries·When to Use 확인 후 발동 → 본질 작업만 수행
+```
