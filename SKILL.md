@@ -1,5 +1,6 @@
 ---
 name: metric-tracker
+version: 1.0
 description: |
   지표 설계·추적·리뷰 엔진. OKR·KPI·핵심지표를 구조화하고 주기적 리뷰를 프로토콜화. Plan-Do-Check-Act 사이클의 Check 담당. 트리거: 메트릭트래커, metric tracker, 지표설계, 지표추적, KPI, OKR, 핵심지표, 대시보드, 주간리뷰, 월간리뷰, 지표분석, 성과측정, 지표 설계해줘, KPI 만들어줘, 리뷰해줘, track metrics, design KPIs. NOT: 재무모델링(→financial-model), 조직 OKR설계 전반(→management-skill M3), 사업전략(→biz-skill), 리서치(→research-frame).
 ---
